@@ -4,11 +4,11 @@ namespace Store.Controllers
 {
     public class LoginController : Controller
     {
-        public ActionResult Index()
+        public IActionResult Index()
         {
             return View();
         }
-        public ActionResult Cadastro()
+        public IActionResult Cadastro()
         {
             return View();
         }

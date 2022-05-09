@@ -6,16 +6,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CasaDoCodigo.Models;
 
-namespace CasaDoCodigo.Controllers
+namespace Store.Controllers
 {
     public class HomeController : Controller
     {
         public IActionResult Carrossel()
-        {
-            return View();
-        }
-
-        public IActionResult Cadastro()
         {
             return View();
         }
