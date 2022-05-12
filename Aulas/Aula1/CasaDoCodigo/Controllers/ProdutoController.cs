@@ -6,6 +6,12 @@ namespace Store.Controllers
     {
         public IActionResult CadastroProduto()
         {
+            ViewBag.Title = "Produto";
+            return View();
+        }
+        public IActionResult Detalhes()
+        {
+            ViewBag.Title = "Produto";
             return View();
         }
     }

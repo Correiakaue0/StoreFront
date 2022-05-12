@@ -36,54 +36,79 @@
 
 
 
+ <div class="album py-5 bg-light">
+    <div class="container">
+    <center>
+        <a asp-controller="Produto" asp-action="CadastroProduto" class="btn btn-outline-primary mb-2">Adicionar Produtos</a>
 
+      <div class="row g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+              <img src="https://cdn.motor1.com/images/mgl/XxZyk/s3/manhart-vw-golf-gti-290.jpg" class="card-img-top bd-placeholder-img" alt="..." width="100%" height="225">
 
-<div class="container">
-    <a asp-controller="Produto" asp-action="CadastroProduto" class="btn btn-outline-primary mb-2">Cadastrar Produto</a>
-    <div class="row">
-        <div class="col-md-3 col-sm-3 col-lg-3">
-            <div class="card"">
-                <img src="https://cdn.motor1.com/images/mgl/XxZyk/s3/manhart-vw-golf-gti-290.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-outline-danger">Excluir</a>
-                    <a href="#" class="btn btn-outline-warning">Detalhes</a>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-danger">Excluir</button>
+                  <a class="btn btn-sm btn-outline-primary" asp-controller="Produto" asp-action="Detalhes">Detalhes</a>
                 </div>
+                <small class="text-muted">9 mins</small>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="col-md-3 col-sm-3 col-lg-3">
-            <div class="card" style="width: 18rem,">
-                <img src="https://turboclass.com.br/images/anuncio/tc-el0obhd-somente-venda-carro-volkswagen-golf-original/IMG-20211008-WA0213.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-outline-danger">Excluir</a>
-                    <a href="#" class="btn btn-outline-warning">Detalhes</a>
+        <div class="col">
+          <div class="card shadow-sm">
+              <img src="https://turboclass.com.br/images/anuncio/tc-el0obhd-somente-venda-carro-volkswagen-golf-original/IMG-20211008-WA0213.jpg" class="card-img-top bd-placeholder-img" alt="..." width="100%" height="225">
+
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-danger">Excluir</button>
+                  <a class="btn btn-sm btn-outline-primary" asp-controller="Produto" asp-action="Detalhes">Detalhes</a>
                 </div>
+                <small class="text-muted">9 mins</small>
+              </div>
             </div>
-         </div>
-         <div class="col-md-3 col-sm-3 col-lg-3">
-             <div class="card" style="width: 18rem,">
-                <img src="https://1.bp.blogspot.com/-3kEa-zrBJxA/YRPF5Y0DQLI/AAAAAAAA1GU/g98nc_1rubQ7RSiSDHcTVxpFtzleCbDpwCLcBGAsYHQ/s2048/VW-Golf-GTI-2022%2B%25282%2529.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-outline-danger">Excluir</a>
-                    <a href="#" class="btn btn-outline-warning">Detalhes</a>
-                </div>
-            </div>
+          </div>
         </div>
-        <div class="col-md-3 col-sm-3 col-lg-3">
-             <div class="card" style="width: 18rem,">
-                <img src="https://1.bp.blogspot.com/-3kEa-zrBJxA/YRPF5Y0DQLI/AAAAAAAA1GU/g98nc_1rubQ7RSiSDHcTVxpFtzleCbDpwCLcBGAsYHQ/s2048/VW-Golf-GTI-2022%2B%25282%2529.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-outline-danger">Excluir</a>
-                    <a href="#" class="btn btn-outline-warning">Detalhes</a>
+        <div class="col">
+          <div class="card shadow-sm">
+              <img src="https://1.bp.blogspot.com/-3kEa-zrBJxA/YRPF5Y0DQLI/AAAAAAAA1GU/g98nc_1rubQ7RSiSDHcTVxpFtzleCbDpwCLcBGAsYHQ/s2048/VW-Golf-GTI-2022%2B%25282%2529.jpg" class="card-img-top bd-placeholder-img" alt="..." width="100%" height="225">
+
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-danger">Excluir</button>
+                  <a class="btn btn-sm btn-outline-primary" asp-controller="Produto" asp-action="Detalhes">Detalhes</a>
                 </div>
+                <small class="text-muted">9 mins</small>
+              </div>
             </div>
+          </div>
         </div>
+        <div class="col">
+          <div class="card shadow-sm">
+              <img src="https://1.bp.blogspot.com/-3kEa-zrBJxA/YRPF5Y0DQLI/AAAAAAAA1GU/g98nc_1rubQ7RSiSDHcTVxpFtzleCbDpwCLcBGAsYHQ/s2048/VW-Golf-GTI-2022%2B%25282%2529.jpg" class="card-img-top bd-placeholder-img" alt="..." width="100%" height="225">
+
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-danger">Excluir</button>
+                  <a class="btn btn-sm btn-outline-primary" asp-controller="Produto" asp-action="Detalhes">Detalhes</a>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </center>
     </div>
-</div> 
+  </div>
+       
+

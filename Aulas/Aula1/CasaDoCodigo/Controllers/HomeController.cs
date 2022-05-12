@@ -12,6 +12,7 @@ namespace Store.Controllers
     {
         public IActionResult Carrossel()
         {
+            ViewBag.Title = "Home";
             return View();
         }
         //DAQUI PRA BAIXO NAO IMPORTA

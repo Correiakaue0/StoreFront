@@ -6,10 +6,12 @@ namespace Store.Controllers
     {
         public IActionResult Index()
         {
+            ViewBag.Title = "Login";
             return View();
         }
         public IActionResult Cadastro()
         {
+            ViewBag.Title = "Cadastro";
             return View();
         }
     }
