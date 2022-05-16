@@ -98,6 +98,13 @@ hr {
      -moz-box-sizing: content-box;
           box-sizing: content-box;
 }
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
 pre {
   overflow: auto;
 }
@@ -1099,6 +1106,12 @@ textarea {
 a {
   color: #337ab7;
   text-decoration: none;
+}
+.hover {
+    color: gray;
+}
+.card-hover:hover {
+    border-color: blue;
 }
 a:hover,
 a:focus {
