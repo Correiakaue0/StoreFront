@@ -1,6 +1,6 @@
-﻿<br></br>
-<br></br>
-
+﻿
+<br>
+<br>
 <center>
 <h3>Login</h3>
 </center>
@@ -9,7 +9,7 @@
 <div class="modal-dialog">
     <div class="modal-content">
         <div class="modal-body">
-            <form action="/Login/ChecarLogin" method="post">
+            <form action="" method="post">
                 <div class="container">
                     <div class="panel panel-default">
                         <div class="panel-body">
@@ -25,7 +25,7 @@
                                 <br /> 
                                 <center>
                                     <div class="form-group">
-                                        <a class="btn btn-success" asp-controller="Home" asp-action="Carrossel">Entrar</a>
+                                        <button class="btn btn-success" onclick="Validate()">Entrar</button>
                                         <a class="btn btn-primary" asp-controller="Login" asp-action="Cadastro">Cadastrar</a>
                                     </div>
                                 </center>
@@ -37,3 +37,28 @@
         </div>
     </div>
 </div>
+<script>
+    function Validate()
+    {
+         fetch("https://localhost:5001/Usuario")
+        .then(resposta => resposta.json())
+        .then(data => 
+        {
+            var u = document.getElementById("email").value;
+            var p = document.getElementById("password").value;
+            if(u == "" && p == ""){ 
+            alert("Usuario e Senha Vazios !");
+            }
+                            data.forEach(function(produto, i) 
+                            {
+                                
+                                if (u == produto.email && p == produto.senha)
+                                {
+                                    alert("Bem Vindo "+produto.nome);
+                                    window.location.assign("Home/Carrossel");
+                                }
+                            });
+        });
+    }
+
+</script>

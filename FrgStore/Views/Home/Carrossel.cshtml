@@ -27,9 +27,8 @@
 </div>
 <!-- Carrossel -->
 
-
     <h1 class="titulo">Produtos</h1>
-
+      <table id="tabela"></table>
 
 
  <div class="album py-5 bg-light">
@@ -37,74 +36,66 @@
     <center>
         <a asp-controller="Produto" asp-action="CadastroProduto" class="btn btn-outline-primary mb-3">Adicionar Produtos</a>
 
-      <div class="row g-3">
-        <div class="col-3">
-          <div class="card shadow-sm card-scale">
-              <img src="https://cdn.motor1.com/images/mgl/XxZyk/s3/manhart-vw-golf-gti-290.jpg" class="card-img-top bd-placeholder-im img-card-justify" >
 
-            <div class="card-body ">
-              <p class="card-text text-truncate">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-danger">Excluir</button>
-                  <a class="btn btn-sm btn-outline-primary" asp-controller="Produto" asp-action="Detalhes">Detalhes</a>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="card shadow-sm card-scale">
-              <img src="https://turboclass.com.br/images/anuncio/tc-el0obhd-somente-venda-carro-volkswagen-golf-original/IMG-20211008-WA0213.jpg" class="card-img-top bd-placeholder-img img-card-justify">
+      <div class="row" id="cardInit">
 
-            <div class="card-body">
-              <p class="card-text text-truncate">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-danger">Excluir</button>
-                  <a class="btn btn-sm btn-outline-primary" asp-controller="Produto" asp-action="Detalhes">Detalhes</a>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="card shadow-sm card-scale">
-              <img src="https://1.bp.blogspot.com/-3kEa-zrBJxA/YRPF5Y0DQLI/AAAAAAAA1GU/g98nc_1rubQ7RSiSDHcTVxpFtzleCbDpwCLcBGAsYHQ/s2048/VW-Golf-GTI-2022%2B%25282%2529.jpg" class="card-img-top bd-placeholder-img img-card-justify">
-
-            <div class="card-body">
-              <p class="card-text text-truncate">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-danger">Excluir</button>
-                  <a class="btn btn-sm btn-outline-primary" asp-controller="Produto" asp-action="Detalhes">Detalhes</a>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="card shadow-sm card-scale">
-              <img src="https://1.bp.blogspot.com/-3kEa-zrBJxA/YRPF5Y0DQLI/AAAAAAAA1GU/g98nc_1rubQ7RSiSDHcTVxpFtzleCbDpwCLcBGAsYHQ/s2048/VW-Golf-GTI-2022%2B%25282%2529.jpg" class="card-img-top bd-placeholder-img img-card-justify" >
-
-            <div class="card-body">
-              <p class="card-text text-truncate">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-danger">Excluir</button>
-                  <a class="btn btn-sm btn-outline-primary" asp-controller="Produto" asp-action="Detalhes">Detalhes</a>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </center>
     </div>
   </div>
+
        
+  <script>
+
+function criaCard(produto){
+    
+    let row = document.getElementById("cardInit");
+    
+
+
+    let card = document.createElement("div");
+    card.className = "card shadow-sm card-scale";
+    card.style = "width: 18rem;";
+
+    let coluna = document.createElement("div");
+    coluna.className = "col-3"
+    coluna.appendChild(card);
+
+    let img = document.createElement("img");
+    img.className = "card-img-top img-card-justify";
+    img.src = produto.imagem;
+    card.appendChild(img);
+
+    let card_body = document.createElement("div");
+    card_body.className = "card-body";
+    let h5 = document.createElement("h5");
+    h5.className = "card-title";
+    h5.innerHTML = produto.nome;
+    card_body.appendChild(h5);
+    let p = document.createElement("p");
+    p.className = "card-text text-truncate";
+    p.innerHTML = produto.descricao;
+    card_body.appendChild(p);
+
+    let a = document.createElement("a");
+    a.className ="btn btn-outline-primary";
+    a.href = "../Produto/Detalhes?id="+produto.id;
+    a.innerHTML = "Detalhes"
+    card_body.appendChild(a);
+
+    card.appendChild(card_body);
+    row.appendChild(coluna);
+}
+
+     fetch("https://localhost:5001/Produto")
+    .then(resposta => resposta.json())
+    .then(data => {
+        data.forEach(function(produto, i) {
+            
+       criaCard(produto)
+
+        })
+    });
+
+  </script>
 

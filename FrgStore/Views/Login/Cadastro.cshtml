@@ -12,14 +12,10 @@
 
 
 
-    <form class="row g-3" action="" method="">
+    <div class="row g-3">
       <div class="col-md-6">
         <label class="form-label">Nome</label>
         <input type="text" class="form-control" id="nome" placeholder="nome">
-      </div>
-      <div class="col-md-6">
-        <label class="form-label">Sobrenome</label>
-        <input type="text" class="form-control" id="sobrenome" placeholder="sobrenome">
       </div>
       <div class="col-12">
         <label class="form-label">Email</label>
@@ -27,14 +23,23 @@
       </div>
        <div class="col-6">
         <label for="inputAddress" class="form-label">Senha</label>
-        <input type="password" class="form-control" id="Senha" placeholder="senha">
+        <input type="password" class="form-control" id="senha" placeholder="senha">
       </div>
       <div class="col-6">
         <label class="form-label">Confirmar Senha</label>
-        <input type="password" class="form-control" id="ConfirmarSenha" placeholder="confirmar">
+        <input type="password" class="form-control" id="confirmarSenha" placeholder="confirmar">
       </div> 
       <div class="col-6">
-           <button type="submit" class="btn btn-success">Finalizar Cadastro</button>
+           <button onclick="Cadastro()" class="btn btn-success">Finalizar Cadastro</button>
       </div>
-    </form>
+    </div>
 </div>
+
+<script>
+            var nome = document.getElementById("nome").value;
+            var email = document.getElementById("email").value;
+            var senha = document.getElementById("senha").value;
+            var cSenha = document.getElementById("confirmarSenha").value;
+            if(senha != cSenha) alert("Confirmação de Senha NÃO Confere !")
+
+</script>
